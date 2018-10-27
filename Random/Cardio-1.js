@@ -4,6 +4,6 @@ function reverseString(str) {
     return str.split('').reverse().join('');
 }
 
-const result = reverseString('bayo');
+const reverse = reverseString('bayo');
 
-console.log(`${result}`);
+console.log(`reverse string is "${reverse}"`);
