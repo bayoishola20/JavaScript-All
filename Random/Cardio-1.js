@@ -92,6 +92,7 @@ console.log(`${revInteger}`);
 // CAPITALIZE LETTERS
 
 /* ================== Method A ================== */
+
 function capLettersA(str) {
     return str
         .toLowerCase()
@@ -117,3 +118,53 @@ function capLettersB(str) {
 let capB = capLettersB('I love Python');
 console.log(`${capB}`);
 
+
+// MAX CHARACTER
+
+/* ================== Method A ================== */
+
+function maxCharA(str) {
+    let charMap = {};
+    let maxNum = 0;
+    let maxChar = '';
+    
+    str.toLowerCase().split('').forEach(function(char) {
+        if(charMap[char]) {
+            charMap[char]++;
+        } else {
+            charMap[char] = 1;
+        }
+    });
+    
+    for(let i in charMap) {
+        // debugger;
+        if(charMap[i] > maxNum) { 
+            maxNum = charMap[i];
+            maxChar = i;
+        }
+    }
+
+    return maxChar;
+}
+
+let maxA = maxCharA('Madagascar and Antananarivo');
+console.log(`Most appearing letter is "${maxA}"`);
+
+
+// FIZZBUZZ
+
+function fizzBuzz() {
+    for(let i = 1; i <= 100; i++) {
+        if(i % 3 == 0){
+            console.log("Fizz");
+        }
+        if(i % 5 == 0){
+            console.log("Buzz");
+        }
+        if(i % 3 == 0 && i % 5 == 0){
+            console.log("FizzBuzz");
+        }
+    }
+}
+
+fizzBuzz();
