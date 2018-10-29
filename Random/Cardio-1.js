@@ -66,4 +66,54 @@ console.log(`reverse string is "${reverseE}"`);
 
 // PALINDROME
 
+function palindrome(str) {
+    let revString = str.split('').reverse().join('');
+    if (revString === str) { return "palindrome";}
+    else { return "not a palindrome";}
+}
+
+let palin = palindrome("racecar");
+console.log(`${palin}`);
+
+
+
+// REVERSE AN INTEGER
+function reverseInt(int) {
+    const revInt = int.toString().split('').reverse().join('');
+
+    return parseInt(revInt) * Math.sign(int);
+}
+
+let revInteger = reverseInt(-56789);
+console.log(`${revInteger}`);
+
+
+
+// CAPITALIZE LETTERS
+
+/* ================== Method A ================== */
+function capLettersA(str) {
+    return str
+        .toLowerCase()
+        .split(' ')
+        .map( word => word[0].toUpperCase() + word.substr(1))
+        .join(' ');
+}
+
+let capA = capLettersA('I love JavaScrpt');
+console.log(`${capA}`);
+
+/* ================== Method B ================== */
+
+function capLettersB(str) {
+    const strArr = str.toLowerCase().split(' ');
+
+    for(let i = 0; i < strArr.length; i++) {
+        strArr[i] = strArr[i].substring(0,1).toUpperCase() + strArr[i].substring(1);
+    }
+    return strArr.join(' ');
+}
+
+let capB = capLettersB('I love Python');
+console.log(`${capB}`);
 
