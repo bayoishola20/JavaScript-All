@@ -171,3 +171,6 @@ function fizzBuzz() {
 }
 
 fizzBuzz();
+
+
+/* Credit to Brad Traversy */
