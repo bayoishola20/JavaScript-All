@@ -94,3 +94,46 @@ function flattenArrayC(arrays) {
 let flatC = flattenArrayC([[1, 3], [2, 27], [3, 12], [4, 5], [6]]);
 
 console.log('Flattened Array C is', flatC);
+
+
+//  ANAGRAM
+
+function isAnagram(strA, strB) {
+    return formatStr(strA) === formatStr(strB);
+}
+
+function formatStr(str) {
+    return str
+            .replace(/[^\w]/g, '')
+            .toLowerCase()
+            .split('')
+            .sort()
+            .join('')
+}
+
+let anagram = isAnagram('Dormitory', 'dirty room');
+
+console.log('Anagram is', anagram);
+
+
+
+//  LETTER CHANGES
+
+function letterChanges(str) {
+    let newStr = str.toLowerCase().replace(/[a-z]/gi, char => {
+        if(char === 'z' || char === 'Z') { return 'a'; }
+        else { return String.fromCharCode(char.charCodeAt() + 1); }
+    });
+
+    newStr = newStr.replace(/a|e|i|o|u/gi, vowel => vowel.toUpperCase());
+
+    return newStr;
+}
+
+
+const letter = letterChanges('hello you')
+
+console.log('Letter change is ', letter);
+
+
+/* Credit to Brad Traversy */
