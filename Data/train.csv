@@ -1,4 +1,4 @@
-Id,Province/State,Country/Region,Lat,Long,Date,ConfirmedCases,Fatalities
+Id,State,Country,Lat,Long,Date,ConfirmedCases,Fatalities
 1,,Afghanistan,33,65,22/01/2020,0,0
 2,,Afghanistan,33,65,23/01/2020,0,0
 3,,Afghanistan,33,65,24/01/2020,0,0
