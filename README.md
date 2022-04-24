@@ -25,4 +25,4 @@ Tips, Tricks and Thoughts
 
 Inspired by several online resources and personal encounters. :wink:
 
-PS. Ubuntu is the OS used.
+PS. Ubuntu is the OS used. Now on Windows. ;(
